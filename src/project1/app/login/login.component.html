@@ -1,0 +1,58 @@
+
+<div class="bodybg">
+    <br><br><br>
+ <div class="container m-auto d-block">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-7">
+       <div class="mano">
+        <br/>
+         <br/><br/><br/><br/><br/><br/><br/>
+         <slideshow [imageUrls]="imageUrlArray"></slideshow>
+          <br/><br/><br/><br/><br/><br><br><br><br><br/>
+         
+        
+       </div>
+      </div>
+      <div class="col-5">
+          <br/><br/><br/>
+          <form #loginForm = "ngForm">
+            <div class="textstyle">
+              <div class="form-group">
+            <label>User Name:<span class="text-danger">*</span></label>
+            <input type="text" name="user_name" class="form-control" [(ngModel)]="model.username" #user_name="ngModel" required>
+            <span class="mandatory">
+                <div *ngIf="user_name.errors?.required && user_name.touched">User Name is required</div>
+            </span>
+          </div>
+          <div class="form-group">
+              <label>Password:<span class="text-danger">*</span></label>
+              <input type="password" name="Password" class="form-control" #Password="ngModel" [(ngModel)]="model.password" required>
+              <span class="mandatory">
+                  <div *ngIf="Password.errors?.required && Password.touched">Password is required</div>
+              </span>
+            </div>
+          </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control" (click)= "onSubmit(loginForm)">LOGIN</button>
+          </div>
+          
+          <div class="form-group">
+              <a href="#" style="color:red;font-weight: 500;float: left;">Forgot Password?</a>
+              
+            </div>
+            <br><br><br>
+            <a href="#" style="color:rgb(27, 27, 158);font-weight: 500;display: block;text-align: center">Sign Up</a>
+            
+        
+          </form>
+        
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br/><br/><br/><br><br><br><br><br/>
+</div> 
+
+</div>

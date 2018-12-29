@@ -1,0 +1,85 @@
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-8 m-auto d-block">
+      
+        <h2>Sign Up</h2><br>
+        <form name="form" #f="ngForm" novalidate>
+          <div class="form-group">
+            <label>Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]="signupInterface.name" #Name="ngModel" name="Name" minlength="4" maxlength="30" required />
+            <span class="mandatory">
+              <div *ngIf="Name.errors?.required && Name.touched">Name is required</div>
+              <div *ngIf="Name.errors?.minlength">Name must be at least 4 characters</div>
+              <div *ngIf="Name.errors?.maxlength">Name must be max of  30 characters</div>
+            </span>
+          </div>
+         
+          <div class="form-group">
+              <label>EmailID<span class="text-danger">*</span></label>
+            <input type="email" class="form-control" [(ngModel)]="signupInterface.emailID" #email="ngModel" name="email" required pattern="[A-Za-z0-9._%+-]{1,40}[@]{1}[a-z]{1,15}[.]{1}[a-z]{2,3}" minlength="8" maxlength="64"/>
+            <span class="mandatory">
+              
+              <div *ngIf="email.errors?.required && email.touched">Email Name is required</div>
+              <div *ngIf="email.errors?.email">Email must be a valid email Address</div>
+              <div *ngIf="email.errors?.minlength">Email Id must be at least 6 characters</div>
+              <div *ngIf="email.errors?.maxlength">Email Id must be max of  64 characters</div>
+           </span>
+           <div [hidden]="!email.errors?.pattern" class="mandatory">
+              Invalid email id
+           </div> 
+          </div>
+          <div class="form-group">
+              <label>Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" [(ngModel)]="signupInterface.password" #Password="ngModel" name="Password" required minlength="6"  maxlength="64" />
+            <span class="mandatory">
+              <div *ngIf="Password.touched && Password.errors?.required">Password is required</div>
+              <div *ngIf="Password.errors?.minlength">Password must be at least 6 characters</div>
+              <div *ngIf="Password.errors?.maxlength">Password must be of max 64 characters</div>
+          </span>
+          </div>
+
+          <div class="form-group">
+              <label>Confirm Password<span class="text-danger">*</span></label>
+              <input type="password" class="form-control" [(ngModel)]="confirmPassword" #confirm_password="ngModel" name="confirm_password" required minlength="6" maxlength="64" />
+              <span class="mandatory">
+                <!-- <div *ngIf="signupInterface.password!=confirmPassword">Password and confirm password are not matching</div> -->
+                <div *ngIf="confirm_password.touched && confirm_password.errors?.required">Confirm Password is required</div>
+                
+            </span>
+            </div>
+      
+          <div class="form-group">
+              <label>Phone Number<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]="signupInterface.phonenumber" #phone_number="ngModel" name="phone_number" required maxlength= "10" minlength= "10"  (keypress) = "onKeyPress($event)"/>
+            <span class="mandatory">
+                <!-- <div *ngIf="Password!=confirmPassword">Password and confirm password are not matching</div> -->
+                <div *ngIf="phone_number.touched && phone_number.errors?.required">phone number  is required</div>
+                <div *ngIf="phone_number.errors?.maxlength">maxlength is 10</div>
+                <div *ngIf="phone_number.errors?.minlength">minlength is 10</div>
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label>Address<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" [(ngModel)]="signupInterface.address" #Address="ngModel" name="Address" minlength="5" maxlength="50"required>
+          <span class="mandatory">
+             
+              <div *ngIf="Address.touched && Address.errors?.required">Address  is required</div>
+              <div *ngIf="Address.errors?.maxlength">minlength is 5</div>
+              <div *ngIf="Address.errors?.maxlength">maxlength is 50</div>
+          </span>
+          <!-- <div [hidden]="!Address.errors?.pattern" class="mandatory">
+              Invalid Address
+           </div>  -->
+        </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" (click)="onSubmit()" [disabled]="f.invalid">Register</button>
+          </div>
+          <br><br><br><br>
+        </form>
+      
+    </div>
+  </div>
+</div>
+</body>

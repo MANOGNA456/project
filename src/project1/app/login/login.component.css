@@ -1,0 +1,22 @@
+.mandatory{
+    color: red;
+}
+
+.mano{
+    background: url("../../assets/image36.jpg") no-repeat;
+    background-size: cover;
+}
+
+.bodybg{
+    background: url("../../assets/image4.jpg") no-repeat;
+    background-size: cover;
+
+}
+
+.textstyle{
+    color: black;
+    font-family: bold;
+    font-size: 20px;
+    font-weight: 600;
+}
+

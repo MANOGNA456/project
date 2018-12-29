@@ -1,0 +1,74 @@
+<body>
+<!-- <div class="col-12"> -->
+    <div class="container-fluid">
+        <nav>
+            <div class="dropdown mr-5">
+           <button class="dropbtn">Lips</button>
+             <div class="dropdown-content">
+                 <a (click)="goToProductslist('SBCT00001')">Lipstick </a>
+                 <a (click)="goToProductslist('SBCT00002')">Lip Gloss</a>
+                 <a (click)="goToProductslist('SBCT00003')">Lip Tints</a>
+                 <a (click)="goToProductslist('SBCT00004')">Lip Liner</a>
+                <a (click)="goToProductslist('SBCT00005')">Lip balm</a>
+             </div>
+             </div>
+             <div class="dropdown mr-5">
+             <button class="dropbtn">Skin</button>
+                 <div class="dropdown-content">
+                     <a (click)="goToProductslist('SBCT00006')">Foundation</a>
+                     <a (click)="goToProductslist('SBCT00007')">Facebrushes</a>
+                     <a (click)="goToProductslist('SBCT00008')">Skin mousse</a>
+                     <a (click)="goToProductslist('SBCT00009')">BB Cream</a>
+                     <a (click)="goToProductslist('SBCT000010')">concealer</a>
+                 </div>
+                 </div>
+              <div class="dropdown mr-5">
+                 <button class="dropbtn">Eyes</button>
+                 <div class="dropdown-content">
+                     <a (click)="goToProductslist('SBCT000011')">Kajal</a>
+                     <a (click)="goToProductslist('SBCT000012')">Mascara</a>
+                     <a (click)="goToProductslist('SBCT000013')">Liquidliner</a>
+                     <a (click)="goToProductslist('SBCT000014')">Eye Shadows</a>
+                     
+                 </div>
+                 </div>
+             <div class="dropdown mr-5">
+                 <button class="dropbtn">Hair</button>
+                     <div class="dropdown-content">
+                         <a (click)="goToProductslist('SBCT000015')">Hair Serum</a>
+                         <a (click)="goToProductslist('SBCT000016')">Hair shampoo</a>
+                         <a (click)="goToProductslist('SBCT000017')">Conditioner</a>
+                     </div>
+                     </div>
+                     <div class="dropdown mr-5">
+                        <button class="dropbtn">Others</button>
+                            <div class="dropdown-content">
+                                <a (click)="goToProductslist('SBCT000018')">Hair Dryers</a>
+                                <a (click)="goToProductslist('SBCT000019')">Hands</a>
+                                <a (click)="goToProductslist('SBCT000020')">More</a>
+                            </div>
+                            </div>
+                     <div class="right"> 
+                             <a><i class="fa fa-sign-out fa-3x" aria-hidden="true" (click)=logOut()></i></a>
+                           <a (click)="getAllProductsFromCart()"><span class="fa fa-shopping-cart fa-3x" aria-hidden="true"></span></a>
+                           
+                         </div>
+         </nav>    
+
+<div class="container">
+  <p class="heading">PRODUCT DETAILS</p>
+  <img class= "image" src="../../assets/{{productDetail.image}}"><br><br><br>
+  <p>{{productDetail.prodname}}</p>
+  <p>{{productDetail.brandname}}</p>
+  <p>{{productDetail.description}}</p>
+  <p>{{productDetail.price}}</p>
+  <br><br>
+  <button type="submit" (click)="addproducttocart(productDetail)">ADD TO CART</button>
+  
+  <button type="submit" (click)="buyNow()">BUY NOW</button>
+  
+</div>
+
+
+</div>
+</body>

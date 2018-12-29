@@ -1,0 +1,199 @@
+/* body{ */
+  /* background:url("../../assets/image14.jpg") no-repeat;
+  background-size: cover; */
+  /* background-color: #f8fcff; */
+  /* margin:0px; */
+  /* background-image: linear-gradient(to bottom left, rgb(8, 24, 245) , #000000); */
+/* } */
+
+
+nav{
+  background-color: #e9559f;
+}
+.dropbtn {
+  background-color: #e9559f;
+  color: white;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #e9559f;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color: #eff30c;}
+.right{
+  float: right;
+  font-size: 1.5em;
+  line-height: 30px; 
+   color:black; 
+   padding: 1px;
+    cursor: pointer;
+}
+
+  
+.container{
+ /* width: 1280px; */
+ margin: 180px auto 0;
+  /* display:flex; */
+
+} 
+
+.container .box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  
+  margin: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .box .imgBox{
+position: relative;
+overflow: hidden;
+
+}
+
+.container .box .imgBox img{
+  width : 100%;
+  transition: 2s;
+  transform: scale(1.2);
+}
+
+.container .box:hover .imgBox img{
+  transform: scale(1);
+}
+
+
+
+
+
+
+@keyframes slider {
+
+  0% {
+      left: 0;
+  }
+  
+  20% {
+      left: 0;
+  }
+  
+  25% {
+      left: -100%;
+  }
+  
+  45% {
+      left: -100%;
+  
+  }
+  
+  50% {
+      left: -200%;
+  
+  }
+  
+  70% {
+      left: -200%;
+  }
+  
+  75% {
+      left: -300%;
+  }
+  
+  95% {
+      left: -300%;
+  }
+  
+  100% {
+      left: -400%;
+  
+  }
+  
+  }
+  
+  #slider {
+      overflow: hidden;
+    /* width:500px; */
+    background-size: cover;
+  
+  }
+  
+  #slider figure img {
+      width:20%;
+      float: center;
+      background-size: cover;
+      /* height: 80em; */
+  
+  }
+  
+  #slider figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 20s slider infinite; 
+      height: 100%;
+      text-align: center;
+      overflow: hidden;
+
+  
+  } 
+
+  .image img{
+    /* width: 100%; */
+    height: 90%;
+  }
+  .img1{
+    height: 650px;
+    /* width:100%; */
+}
+.img2{
+    height: 650px;
+}
+.img3{
+    height: 650px;
+}
+.img4{
+    height: 650px;
+}
+.img5{
+    height: 650px;
+}
+.container-fluid{
+    width:100%;
+
+}
+
+body{
+    background-image: url("../../assets/bgmake5.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,66 @@
+.image{
+    height: 50%;
+    width: 50%;
+}
+
+p{
+    font-size: 20px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 20px;
+    font-family: bold;
+}
+
+nav{
+  background-color: #e9559f;
+}
+.dropbtn {
+  background-color: #e9559f;
+  color: white;
+  padding: 16px;
+  font-size: 25px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #e9559f;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color: #eff30c;}
+.right{
+  float: right;
+  font-size: 1.5em;
+  line-height: 30px; 
+   color:black; 
+   padding: 1px;
+   cursor: pointer;
+
+}
+body{
+  background-image: url("../../assets/bgmake5.jpg");
+  background-size: cover;
+}
+

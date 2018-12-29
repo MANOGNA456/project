@@ -1,0 +1,67 @@
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-8 m-auto d-block">
+      
+        <h2>Sign Up</h2><br>
+        <form name="form" #f="ngForm" novalidate>
+          <div class="form-group">
+            <label for="Name">Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]="model.firstname" #first_name="ngModel" name="firstName" required />
+            <span class="mandatory">
+              <div *ngIf="first_name.errors?.required && first_name.touched">Name is required</div>
+            </span>
+          </div>
+          <div class="form-group">
+              <label for="Name">User Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]="model.username" #user_name="ngModel" name="userName" required />
+            <span class="mandatory">
+              <div *ngIf="user_name.errors?.required && user_name.touched">User Name is required</div>
+            </span>
+          </div>
+          <div class="form-group">
+              <label for="Name">EmailID<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]="model.email" #email="ngModel" name="email" required email />
+            <span class="mandatory">
+              
+              <div *ngIf="email.errors?.required && email.touched">Email Name is required</div>
+              <div *ngIf="email.errors?.email">Email must be a valid email Address</div>
+           </span>
+          </div>
+          <div class="form-group">
+              <label>Password<span class="text-danger">*</span></label>
+            <input type="password" class="form-control" [(ngModel)]="Password" #password="ngModel" name="password" required minlength="6" />
+            <span class="mandatory">
+              <div *ngIf="password.touched && password.errors?.required">Password is required</div>
+              <div *ngIf="password.errors?.minlength">Password must be at least 6 characters</div>
+          </span>
+          </div>
+
+          <div class="form-group">
+              <label>Confirm Password<span class="text-danger">*</span></label>
+              <input type="password" class="form-control" [(ngModel)]="confirmPassword" #confirm_password="ngModel" name="confirm_password" required minlength="6" />
+              <span class="mandatory">
+                <div *ngIf="Password!=confirmPassword">Password and confirm password are not matching</div>
+                <div *ngIf="confirm_password.touched && confirm_password.errors?.required">Confirm Password is required</div>
+                
+            </span>
+            </div>
+      
+          <div class="form-group">
+              <label>Phone Number<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" [(ngModel)]="model.Phone" #phone_number="ngModel" name="phone_number" required maxlength= "10" />
+            <span class="mandatory">
+                <!-- <div *ngIf="Password!=confirmPassword">Password and confirm password are not matching</div> -->
+                <div *ngIf="phone_number.touched && phone_number.errors?.required">phone number  is required</div>
+                <div *ngIf="phone_number.errors?.maxlength">maxlength is 10</div>
+            </span>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" (click)="onSubmit(f)" [disabled]="f.invalid">Register</button>
+          </div>
+        </form>
+      
+    </div>
+  </div>
+</div>
+</body>

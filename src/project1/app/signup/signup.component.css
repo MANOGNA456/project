@@ -1,0 +1,8 @@
+.mandatory{
+    color: red;
+}
+
+body{
+    background: url("../../assets/image2.jpg") no-repeat;
+    background-size: cover;
+}

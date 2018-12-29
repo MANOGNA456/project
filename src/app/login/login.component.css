@@ -1,0 +1,172 @@
+/* .mandatory{
+    color: red;
+} */
+
+/* .mano{
+    background: url("../../assets/image36.jpg") no-repeat;
+    background-size: cover;
+} */
+
+ /* .bodybg{
+    background-image: linear-gradient(to bottom right, rgb(8, 82, 243), rgb(0, 255, 115));
+
+}
+
+.textstyle{
+    color: black;
+    font-family: bold;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@keyframes slider {
+
+    0% {
+        left: 0;
+    }
+    
+    20% {
+        left: 0;
+    }
+    
+    25% {
+        left: -100%;
+    }
+    
+    45% {
+        left: -100%;
+    
+    }
+    
+    50% {
+        left: -200%;
+    
+    }
+    
+    70% {
+        left: -200%;
+    }
+    
+    75% {
+        left: -300%;
+    }
+    
+    95% {
+        left: -300%;
+    }
+    
+    100% {
+        left: -400%;
+    
+    }
+    
+    }
+    
+    #slider {
+        overflow: hidden;
+
+    
+    }
+    
+    #slider figure img {
+        width:20%;
+        float: left;
+        background-size: cover;
+        
+    
+    }
+    
+    #slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 20s slider infinite; 
+        height: 300%;
+
+    
+    } */
+
+    .warning{
+        color: red;
+    } 
+.mandatory{
+    color: red;
+}
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url(../../assets/bg7.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: #999;
+        opacity: 10;
+        height: 100vh;
+       
+      }
+      .card {
+        background-color: #f8fcff;
+        transition: 0.3s;
+        width: 65%;
+        height: auto;
+        margin: auto;
+        display: block;
+        border-radius: 10px;
+      }
+      button {
+        background-color: #e9559f;
+        color: white;
+        font-size: 15px;
+        border: 0.5px solid white;
+        width: 7 0%;
+        height: 8%;
+        border-radius: 6px;
+      }
+      .reg {
+        background-color: transparent !important;
+        color: black !important;
+      }
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      img {
+        border-radius: 5px 5px 0 0;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: transparent !important;
+        padding: 10px;
+      }
+      .grid-item1 {
+        background-color: transparent !important;
+        padding: 10px;
+        text-align: center;
+      }
+      .grid-item2 {
+        background-color: transparent !important;
+        border: 0.5px solid rgba(153, 151, 151, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .imgclass {
+        width: 35%;
+      }
+      .q {
+        color: #ff63b1;
+        font-size: x-large;
+        text-shadow: 0px -1px 0px black;
+      }
+      b {
+        color: #e9559f;
+        font-size: medium;
+      }
+      
+      .container {
+        padding: 10px 16px;
+      }
